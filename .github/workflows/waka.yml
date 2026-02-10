@@ -1,9 +1,12 @@
 name: Waka Readme
 
+permissions:
+  contents: write
+
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -16,5 +19,3 @@ jobs:
           SHOW_TOTAL_TIME: true
           SHOW_TIME: true
           LANG_COUNT: 10
-          SHOW_MASKED_TIME: false
-          SHOW_TITLE: true
