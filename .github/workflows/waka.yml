@@ -1,11 +1,8 @@
 name: Waka Readme
 
-permissions:
-  contents: write
-
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,4 +12,9 @@ jobs:
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TIME_RANGE: all_time
+          SHOW_TOTAL_TIME: true
+          SHOW_TIME: true
+          LANG_COUNT: 10
+          SHOW_MASKED_TIME: false
+          SHOW_TITLE: true
